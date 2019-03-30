@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Practising Forms</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+
+  <body>
+    <h1>
+      Ask only questions that are absolutely neccessary for ulitmate user
+      experience
+    </h1>
+
+    <ol>
+      <li>It's a good idea to provide user with the steps ahead</li>
+      <li>
+        If password required, please make sure you explain if special characters
+        are needed
+      </li>
+      <li>
+        Error codes need to be better explained instead of "something went
+        wrong" or "unable to log in"
+      </li>
+      <li>
+        Confirmation required so that users knows whether the form has been
+        submitted
+      </li>
+      <li>Explain if the payament is required beforehand</li>
+      <li>
+        Make sure the form is in logical order (people don't really read a lot)
+      </li>
+      <li>
+        If form is really long, make sure to break it in few steps / different
+        pages with breadcrumps
+      </li>
+      <li>Always think twice if you need that information from the user</li>
+    </ol>
+
+    <h2>Data Privacy</h2>
+    <h3>
+      Remember that Many countries have laws about when and how you can collect
+      personal information, how to securely store that data, and what you can do
+      with the personal information.
+    </h3>
+
+    <hr />
+    <h3>My first example of form</h3>
+    <div class="container">
+      <form action="destination.html" method="GET">
+        <fieldset>
+          <legend>Dane personalne</legend>
+          <label for="name"> Imię:</label>
+          <input
+            type="text"
+            name="username"
+            id="name"
+            required
+            autofocus
+            placeholder="Imię i Nazwisko"
+            pattern="[a-zA-Z]{3,}"
+            title="Proszę wpisać pełne imię"
+          />
+          <label for="email">E-mail:</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            required
+            placeholder="e-mai"
+            pattern="[a-zA-Z]{3,}@[.]{1}[a-zA-Z]{2,}"
+            title="Sprawdź czy podany e-mail został wpisany poprawnie"
+          />
+          <label for="phone">Phone:</label
+          ><input
+            type="tel"
+            name="phone"
+            id="phone"
+            required
+            placeholder="Numer telefonu"
+            pattern="[0-9]{3,}"
+            title="Wpisz numer tel abyśmy mogli potwierdzić rezerwację"
+          />
+          <select name="country" required>
+            <option value=""> </option>
+            <option value="PL">PL</option>
+            <option value="RU">RU</option>
+            <option value="DE">DE</option>
+            <option value="ES">ES</option>
+          </select>
+        </fieldset>
+
+        <br />
+        <fieldset>
+          <legend>Booking details</legend>
+          <label for="date">Data przyjazdu:</label
+          ><input id="date" type="date" name="date" min="03-04-2019" />
+          <label for="numberOfGuests">Liczba gości:</label
+          ><input
+            id="numberOfGuests"
+            type="number"
+            name="numberOfGuests"
+            min="1"
+            max="6"
+          />
+          <p>Zarezerwować pokój ze śniadaniem?</p>
+          <label for="yesMeals">tak</label
+          ><input id="yesMeals" type="radio" name="meals" value="yesMeals" />
+          <label for="noMeals">nie</label
+          ><input id="noMeals" type="radio" name="meals" value="noMeals" />
+          <br />
+          <button type="submit" class="btn">Rezerwuję</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="container">
+      <!-- !-------------------------------------- RADIO BUTTON --------------------------------------------------------- -->
+
+      <form action="" id="questions" method="POST" name="questions">
+        <fieldset>
+          <legend>What is your favourite color?</legend>
+          <label for="blue">blue</label
+          ><input type="radio" name="favcolor" value="blue" id="blue" checked />
+          <label for="green">green</label
+          ><input type="radio" name="favcolor" value="green" id="green" />
+          <label for="yellow">yellow</label
+          ><input
+            type="radio"
+            name="favcolor"
+            value="yellow"
+            id="yellow"
+          /><br />
+          <input type="submit" /><br /><br />
+        </fieldset>
+
+        <!-- !-------------------------------------- CHECK BOX --------------------------------------------------------- -->
+        <fieldset>
+          <legend>What is your favourite color?</legend>
+          <label for="blue">blue</label
+          ><input
+            type="checkbox"
+            name="favcolor"
+            value="blue"
+            id="blue"
+            checked
+          />
+          <label for="green">green</label
+          ><input type="checkbox" name="favcolor" value="green" id="green" />
+          <label for="yellow">yellow</label
+          ><input
+            type="checkbox"
+            name="favcolor"
+            value="yellow"
+            id="yellow"
+          /><br />
+          <input type="submit" /><br /><br />
+        </fieldset>
+
+        <!-- !-------------------------------------- OPTIONS --------------------------------------------------------- -->
+
+        <fieldset>
+          <Label for="pizza">What is your favourite pizza topping??</Label>
+          <select name="pizza" id="pizza">
+            <!-- adding 'multiple'attribute will allow few options to choose 
+                from  and 'multiple size="8" will show how many options are available without scrolling-->
+            <option value=""></option>
+
+            <optgroup label="veggies">
+              <option value="mushrooms">Mushrooms</option>
+              <option value="Onions">Onions</option>
+            </optgroup>
+            <optgroup label="meat">
+              <option value="Peperoni">Peperoni</option>
+            </optgroup>
+          </select>
+          <br /><br />
+        </fieldset>
+
+        <!-- !---------------------------- INPUT TYPES --------------------------------------------------------- -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" /><br />
+        <label for="email">email:</label>
+        <input type="email" id="email" name="email" /><br />
+        <label for="website">Website:</label>
+        <input type="url" id="website" name="website" /><br />
+        <label for="number">Number</label>
+        <input type="number" name="number" id="number" /><br />
+        <label for="date">Birthday:</label>
+        <input
+          type="date"
+          id="birthday"
+          name="birthday"
+          min="2019-01-01"
+          max="2021-01-01"
+        /><br />
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" step="1800" /><br />
+        <!-- Step every 30 minutes -->
+        <label for="phone">Tel. number:</label><br />
+        <input type="tel" id="phone" name="phone" />
+        <input type="color" id="color" name="color" /><br />
+        <label for="resume">Choose a file</label
+        ><input type="file" id="resume" name="resume" accept="image/*" /><br />
+        <!-- 'accept' property allows you to specify file available for upload -->
+
+        <label for="password"
+          >Type in your password
+          <input type="password" id="password" name="password"/></label
+        ><br />
+        <input type="hidden" value="1234" name="tracking" />
+        <!-- hidden for the user -->
+        <label for="range"> Choose max number</label>
+        <input type="range" min="1" max="10" step="1" />
+
+        <label for="search">Search</label
+        ><input type="search" id="search" name="search" />
+      </form>
+
+      <!-- !---------------------------- TEXT AREA --------------------------------------------------------- -->
+      <label for="poem"> Write a poem: </label><br />
+      <textarea name="comments" id="comments" cols="30" rows="10"></textarea
+      ><br />
+
+      <!-- !---------------------------- SUBMIT BUTTONS --------------------------------------------------- -->
+
+      <input type="submit" value="submit answers" />
+      <input type="reset" value="wyczysc" />
+
+      <hr />
+
+      <input type="button" value="button" />
+      <hr />
+      <button type="submit" value="button submit">
+        <strong>submit</strong>
+      </button>
+      <hr />
+      <input
+        type="image"
+        src="https://www.staples-3p.com/s7/is/image/Staples/s0105131_sc7?$splssku$"
+        alt="button with easy name on it"
+        width="50px"
+      />
+
+
+  <!-- !---------------------------- ATTRIBUTES USED IN FORMS --------------------------------------------------- -->
+<h3> Common attributes used in forms</h3>
+<ol>
+  <li> input type = "button / checkbox / color / date / email / file / hidden / image / month / search / tel / etc."</li>
+  <li> input name = labels the data when it's sent to the server or database, or however the data is processed, and you can think of it like the column name in the database. Each name in a form should be unique. This isn't shown to the user. </li>
+  <li> input for = links label with ID, make sure you include in</li>
+  <li> input value=  For fields where a user enters data such as text, number, or date, the value is the data that the user fills into the form field. You can also use the value attribute to set a default value of a field when the form is first loaded. The user will see this as data that's already filled in but they can change it by entering their own data. The next is in a form field where the user chooses from options you supply to them, such as checkboxes, radio buttons, or select menu. So there should be a value for each checkbox, or a value for each option in a select element. The value attribute is also used on button-type inputs to set the text that is displayed on the button. </li>
+  <li> input= checked / selected</li>
+  <li> input = placeholder (helps with the answer) </li>
+  <li> input = min / max  </li>
+  <li> input = step   </li>
+  <li> input = maxlength="value" / max number of characters allowed    </li>
+  <li> multiple value / allows enter multiple values eg. input type="email" multiple    </li>
+  <li> input type="text" PATTERN="[A-Za-z] {3}"   </li>
+  <li> input type="text" REQUIRED (must be filled in)  </li>
+  <li> input type="text" ARIA-REQUIRED="true" (aria will tell that this is required )  </li>
+  <li> input type="text" DISABLED (either to one or multiple fields)  </li>
+  <li> input type="text" readonly  (either to one or multiple fields)  </li>
+  <li> input type="text" HIDDEN  (user won't see it, good for tracking)  </li>
+
+</ol>
+
+<input value="">
+    </div>
+  </body>
+</html>
