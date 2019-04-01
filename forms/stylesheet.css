@@ -3,3 +3,55 @@
   padding: 10px;
   display: inline-block;
 }
+
+button, input, select, textarea {
+	font-family: inherit;
+  font-size: 100%;
+
+}
+
+input, textarea, select {
+
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+
+input[type="date"] {
+
+  font-size: 1em;
+  color:burlywood;
+}
+
+input[type="style"] {
+  color: firebrick;
+}
+
+
+label {
+  color: midnightblue;
+  font-weight: bold;
+}
+
+input[type="date"] + label {
+  color: orangered;
+}
+
+
+fieldset {
+  color: royalblue;
+  font-size: 1.1em;
+
+}
+
+
+
+
+/* input:valid {
+  border:2px solid green;
+}
+
+input:invalid {
+  border: 2px dashed red;
+} */
