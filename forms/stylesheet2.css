@@ -31,7 +31,7 @@ textarea {
   background-color:aliceblue;
 }
 
-input  {
+input .container {
   width: 100%;
 
 }
@@ -49,4 +49,18 @@ label {
 .szachmat {
 
   display: flex;
+ }
+
+ input [type="checkbox"] {
+   margin:0;
+   opacity:0;
+   width: 0;
+ }
+
+ input [type="checkbox"] + label{
+  border: 2px solid burlywood;
+  background-color:darkorange;
+  padding:4px, 10px;
+  border-radius: 7px;
+
 }
