@@ -1,0 +1,40 @@
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+input, textarea, select {
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+
+select {
+  display:block;
+  margin-bottom: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: white;
+}
+
+select:not([multiple]) {
+  background: url(double-arrow.png) right center no-repeat; 
+  background-size: 1em 1em;
+  padding-right: 1em;
+  background-color: floralwhite;
+}
+
+select {
+  padding: 8px 1em 8px 8px;
+  background-color:ghostwhite;
+  border: none;
+}
+
+option {
+  padding: 5px;
+}
+
+optgroup {
+  border: 1px dashed white;
+}
