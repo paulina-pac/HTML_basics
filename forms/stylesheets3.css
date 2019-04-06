@@ -1,0 +1,41 @@
+button, input, select, textarea {
+	font-family: inherit;
+	font-size: 100%
+}
+input, textarea, select {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#styled input, #styled button {
+
+  -webkit-appearance:none;
+  -moz-appearance: none;
+  appearance:none;
+border: none;
+background-color: navy ;
+padding: 10px;
+border-radius: 5px;
+font-family: sans-serif;
+color: white;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+font-weight: bold;
+
+
+}
+input, button {
+
+}
+
+div {
+  margin-top: 20px;
+}
+
+#styled input:hover, #styled button:hover {
+  background-color: blue;
+}
+
+#styled input[type="submit"]:focus, #styled button[type="submit"]:focus {
+
+  border: 2px solid hotpink;
+}
