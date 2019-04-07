@@ -55,3 +55,13 @@ fieldset {
 input:invalid {
   border: 2px dashed red;
 } */
+
+li {
+  background: lightblue;
+  max-width: 60vh;
+
+  padding-bottom: 10px;
+
+  font-family: sans-serif;
+  
+}
